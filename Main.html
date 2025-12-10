@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event E-edition</title>
+    <link rel="stylesheet" href="Main.css">
+    <script src="Main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navig">Event E-edition</div>
+            <ul class="nav-list" id="navname">
+                <li><a href="#Main">|  &nbsp Home &nbsp |</a></li>
+                <li><a href="#add">List an Event &nbsp |</a></li>
+                <li><a href="#upcoming">Register for an Event &nbsp |</a></li>
+                <li><a href="#footer">Contact Us  &nbsp|</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="Main" id="Main">
+        <h1>Event Management & Booking Portal</h1>
+        <p>Create events • Manage events • Book your seat</p>
+    </section>
+
+    <section class="Create" id="add">
+        <h2>Add an Event</h2>
+
+        <form id="addeve">
+            <label for="name">Event Title: </label><br>
+            <input type="text" id="name" placeholder="Enter event name" required>
+            <br><br>
+
+            <label for="about">Description: </label><br>
+            <textarea id="about" placeholder="Write short event details" required></textarea>
+            <br><br>
+
+            <label for="Date">Date & Time: </label><br>
+            <input type="datetime-local" id="Date" required>
+            <br><br>
+
+            <label for="Venue">Venue: </label><br>
+            <input type="text" id="Venue" placeholder="Eg: Main Auditorium" required>
+            <br><br>
+
+            <label>Event Banner: </label><br>
+            <input type="url" id="eventImage" placeholder="Add Event banner image">
+            <br><br>
+
+            <button type="submit" class="button">Add Event</button>
+        </form>
+    </section>
+
+    <section class="events-list">
+        <h2>Upcoming Events</h2>
+        <div id="upcoming" class="soon"></div>
+    </section>
+
+    <!-- Booking Popup -->
+    <div id="Book" class="popup">
+        <div class="booking-popup">
+            <span class="choose" id="final">&times;</span>
+            <h2>Book Your Seat</h2>
+
+            <form id="bookingForm">
+                <label for="userName">Your Name: </label><br>
+                <input type="text" id="userName" required><br><br>
+
+                <label for="userEmail">Email: </label><br>
+                <input type="email" id="userEmail" required><br><br>
+
+                <label for="userSeats">Number of Seats: </label><br>
+                <input type="number" id="userSeats" min="1" required><br><br>
+
+                <button type="submit" class="btn">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <h3>Contact Us</h3><br>
+        <p>Email: contact@EventE-edition.com</p>
+        <p>Phone: +91 12345 67891</p>
+        <p>Parul University, Vadodara</p><br>
+        <h3>Follow Us</h3>
+        <ul class="social-links">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
+        <p>© Event Portal | Designed for End Sem Project |</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+/* ===== GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #a1cca6;
+    color: #123f3f;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #0d3b3b;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.navig {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+   flex-wrap: wrap;
+    gap: 15px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-list li a:hover {
+    color: #a1cca6;
+    text-decoration: underline;
+}
+
+/* ===== HERO SECTION ===== */
+.Main {
+    text-align: center;
+    padding: 120px 20px;
+    background: #d5e8d4;
+}
+
+.Main h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.Main p {
+    font-size: 18px;
+    color: #078383;
+}
+
+/* ===== ADD EVENT FORM & EVENT LIST ===== */
+.Create, .events-list {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #e3f2df;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+     box-sizing: border-box;
+}
+
+.Create h2, .events-list h2 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #123f3f;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.button {
+    padding: 10px 20px;
+    background: #0d3b3b;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.button:hover {
+    background: #145858;
+}
+
+/* ===== EVENT CARD ===== */
+.event-card {
+    width: 90%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+
+.event-card img {
+    width: 100%;
+    max-height: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.event-card h3 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.event-card p {
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.card-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-buttons button {
+    flex: 1 1 120px;
+    min-width: 100px;
+}
+
+/* ===== UPCOMING EVENTS ===== */
+.soon {
+    margin-top: 20px;
+}
+
+/* ===== BOOKING POPUP ===== */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 2000;
+}
+
+.booking-popup {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 10% auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.choose {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #0d3b3b;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+    color: #a1cca6;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.social-links {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.social-links li {
+    margin: 5px 0;
+}
+
+.social-links a {
+    color: #a1cca6;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.social-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE (MOBILE) ===== */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: row;
+        gap: 10px;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Main h1 {
+        font-size: 30px;
+    }
+
+    .Create, .events-list {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .event-card img {
+        max-height: 150px;
+    }
+
+    .event-card h3 {
+        font-size: 18px;
+    }
+
+    .event-card p {
+        font-size: 14px;
+    }
+
+    .card-buttons button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 5px;
+    }
+
+    .navbar {
+        padding: 10px 5px;
+    }
+    .nav-list{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
